@@ -1,0 +1,287 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0 auto;
+    background-color: white;
+    width: 68%;
+    color: black;
+}
+
+#persoonlijkeInfo {
+    display: none;
+}
+
+.checked {
+    color: darkslategray;
+}
+
+div {
+    text-align: center;
+}
+
+.hoofding {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: darkslategray;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.hoofding ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.hoofding ul li {
+    padding: 10px;
+}
+
+.hoofding a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;    
+}
+
+.hoofding h1 a {
+    font-size: 24px;
+}
+
+.hoofding ul li:hover {
+    background-color: rgb(176, 228, 228);
+    border-radius: 4%;
+}
+
+.hoofding ul li:hover a {
+    color: black;
+}
+
+.sectie {
+    background: white;
+    padding: 20px;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.sectie h2 {
+    background: #f4f4f4;
+    color: black;
+    padding: 10px;
+    margin-top: 0;
+}
+
+.sidebar {
+    background: darkslategray;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 15%;
+    height: 100%;
+    padding: 20px 0;
+}
+
+
+.profile img {
+    display: block;
+    width: 80%;
+    border-radius: 50%;
+    margin: 0 auto;
+    transition: box-shadow 0.3s ease;
+}
+
+.profile img:hover {
+    box-shadow: 0px 0px 35px 2px rgb(250, 250, 250);
+}
+
+.profile img:active {
+    box-shadow: none;
+    border: 3px solid grey;
+}
+
+.sidebar h3 {
+    color: white;
+}
+
+.sidebar p {
+    color: white;
+    font-size: 16px;
+}
+
+.footer {
+    background-color: darkslategray;
+    color: white;
+    padding: 20px 0;
+    width: 68%;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    border-radius: 5px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.footer-left {
+    width: auto;
+}
+
+.footer-center {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.footer-right {
+    width: auto;
+}
+
+.footer-left p,
+.footer-center p,
+.footer-right a {
+    margin: 0;
+}
+
+.footer-right a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    border: 2px solid white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.footer-right a:hover {
+    background-color: rgb(176, 228, 228);
+    color: black;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 14px 16px;
+    background-color: inherit;
+    margin: 0;
+}
+
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+    background-color: rgb(176, 228, 228);
+    color: black;
+    border-radius: 5% 5% 0 0;
+    width: 175px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 14px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: lightgray;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    border-radius: 0 0 4% 4%;
+    width: 175px;
+}
+
+@media screen and (max-width: 1230px) {
+
+    body,
+    .footer {
+        width: 100%;
+    }
+
+    .hoofding,
+    .footer {
+        border-radius: 0%;
+    }
+
+    #persoonlijkeInfo {
+        display: inline-block;
+    }
+
+    .sectie .foto {
+        margin-top: 20px;
+        display: inline;
+        float: none;
+        width: 20%;
+        border: 3px solid grey;
+        height: auto;
+        border-radius: 50%;
+    }
+
+    .sidebar {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .hoofding {
+        display: block;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .hoofding h1 {
+        margin-bottom: 30px;
+    }
+
+
+    .hoofding ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    .hoofding ul li {
+        padding: 10px;
+    }
+
+    .footer {
+        position: relative;
+    }
+
+    .sectie .foto {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .sectie .foto {
+        width: 40%;
+    }
+}
