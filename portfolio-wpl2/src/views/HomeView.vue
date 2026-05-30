@@ -1,32 +1,36 @@
 <script setup>
-import AboutSection from '@/components/portfolio/AboutSection.vue'
-import HeroSection from '@/components/portfolio/HeroSection.vue'
+import AssignmentsSection from '@/components/portfolio/AssignmentsSection.vue'
+import DevelopmentSection from '@/components/portfolio/DevelopmentSection.vue'
+import IntroSection from '@/components/portfolio/IntroSection.vue'
+import LogbookSection from '@/components/portfolio/LogbookSection.vue'
+import PortfolioHero from '@/components/portfolio/PortfolioHero.vue'
 import PortfolioNav from '@/components/portfolio/PortfolioNav.vue'
-import ProjectsSection from '@/components/portfolio/ProjectsSection.vue'
-import TimelineSection from '@/components/portfolio/TimelineSection.vue'
+import ReflectionSection from '@/components/portfolio/ReflectionSection.vue'
 import {
-  about,
+  assignments,
+  developmentSections,
+  logbook,
   navItems,
+  portfolioIntro,
   profile,
-  projects,
-  skills,
-  stats,
-  timeline,
+  reflections,
 } from '@/data/portfolio'
 </script>
 
 <template>
   <div class="page-shell">
-    <PortfolioNav :items="navItems" :profile="profile" />
+    <PortfolioNav :items="navItems" :profile="profile" traject="wpl1" />
     <main>
-      <HeroSection :profile="profile" :stats="stats" />
-      <AboutSection :about="about" :skills="skills" />
-      <ProjectsSection :projects="projects" />
-      <TimelineSection :timeline="timeline" />
+      <PortfolioHero :profile="profile" traject="wpl1" />
+      <IntroSection :intro="portfolioIntro" />
+      <LogbookSection :logbook="logbook" />
+      <DevelopmentSection :sections="developmentSections" />
+      <AssignmentsSection :assignments="assignments" />
+      <ReflectionSection :reflections="reflections" />
     </main>
     <footer class="site-footer">
-      <span>Can Ciftci · PXL-Digital · 1PROd</span>
-      <span>Portfolio</span>
+      <span>{{ profile.name }} · 2PROC · PXL-Digital</span>
+      <span>Opdracht Portfolio WPL1</span>
     </footer>
   </div>
 </template>
