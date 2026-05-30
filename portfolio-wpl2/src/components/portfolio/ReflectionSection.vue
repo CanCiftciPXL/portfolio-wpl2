@@ -10,7 +10,7 @@ defineProps({
 </script>
 
 <template>
-  <RevealSection id="reflectie" class="wpl-section section-shell content-section">
+  <RevealSection id="reflectie" class="wpl-section section-shell">
     <h2 class="wpl-section__title">Reflectie</h2>
 
     <article v-for="(item, index) in reflections" :key="item.title" class="wpl-reflection">

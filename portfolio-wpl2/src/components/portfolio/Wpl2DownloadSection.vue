@@ -12,7 +12,7 @@ defineProps({
 <template>
   <RevealSection
     id="eindreflectie"
-    class="wpl-section section-shell content-section wpl-section--alt"
+    class="wpl-section section-shell wpl-section--alt"
   >
     <div class="wpl2-download">
       <div class="wpl2-download__copy">

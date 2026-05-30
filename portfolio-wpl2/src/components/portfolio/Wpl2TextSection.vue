@@ -24,7 +24,7 @@ defineProps({
 <template>
   <RevealSection
     :id="id"
-    class="wpl-section section-shell content-section"
+    class="wpl-section section-shell"
     :class="{ 'wpl-section--alt': alt }"
   >
     <h2 class="wpl-section__title">{{ title }}</h2>

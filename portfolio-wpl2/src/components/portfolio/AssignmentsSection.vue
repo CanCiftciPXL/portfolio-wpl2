@@ -10,7 +10,7 @@ defineProps({
 </script>
 
 <template>
-  <RevealSection id="opdrachten" class="wpl-section section-shell content-section wpl-section--alt">
+  <RevealSection id="opdrachten" class="wpl-section section-shell wpl-section--alt">
     <h2 class="wpl-section__title">Opdrachten</h2>
 
     <article v-for="(item, index) in assignments" :key="item.title" class="wpl-assignment">

@@ -10,7 +10,7 @@ defineProps({
 </script>
 
 <template>
-  <RevealSection id="ontwikkeling" class="wpl-section section-shell content-section">
+  <RevealSection id="ontwikkeling" class="wpl-section section-shell">
     <h2 class="wpl-section__title">Ontwikkeling</h2>
 
     <article
