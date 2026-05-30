@@ -1,5 +1,5 @@
 <script setup>
-import RevealSection from './RevealSection.vue'
+import WplSection from './WplSection.vue'
 
 defineProps({
   logbook: {
@@ -10,10 +10,22 @@ defineProps({
 </script>
 
 <template>
-  <RevealSection id="logboek" class="wpl-section section-shell wpl-section--alt">
-    <h2 class="wpl-section__title">{{ logbook.title }}</h2>
-    <figure class="wpl-figure">
+  <WplSection id="logboek" :title="logbook.title" alt>
+    <figure class="figure">
       <img :src="logbook.image" :alt="logbook.alt" />
     </figure>
-  </RevealSection>
+  </WplSection>
 </template>
+
+<style scoped>
+.figure {
+  margin-top: 1.5rem;
+}
+
+.figure img {
+  width: 100%;
+  max-width: 900px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+}
+</style>

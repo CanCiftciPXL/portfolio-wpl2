@@ -29,7 +29,20 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <section ref="section" class="reveal-section" :class="{ 'is-visible': isVisible }">
+  <section ref="section" class="reveal" :class="{ 'reveal--visible': isVisible }">
     <slot />
   </section>
 </template>
+
+<style scoped>
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out);
+}
+
+.reveal--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>

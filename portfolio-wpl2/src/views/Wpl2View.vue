@@ -1,5 +1,6 @@
 <script setup>
 import IntroSection from '@/components/portfolio/IntroSection.vue'
+import PageLayout from '@/components/portfolio/PageLayout.vue'
 import PortfolioHero from '@/components/portfolio/PortfolioHero.vue'
 import PortfolioNav from '@/components/portfolio/PortfolioNav.vue'
 import Wpl2DownloadSection from '@/components/portfolio/Wpl2DownloadSection.vue'
@@ -15,33 +16,27 @@ import {
 </script>
 
 <template>
-  <div class="page-shell">
-    <PortfolioNav :items="wpl2NavItems" :profile="profile" traject="wpl2" />
+  <PageLayout>
+    <template #nav>
+      <PortfolioNav :items="wpl2NavItems" :profile="profile" traject="wpl2" />
+    </template>
 
-    <main>
-      <PortfolioHero :profile="profile" traject="wpl2" />
+    <PortfolioHero :profile="profile" traject="wpl2" />
+    <IntroSection :intro="wpl2Intro" />
+    <Wpl2TextSection
+      id="case"
+      :title="clockWiseCase.title"
+      :paragraphs="clockWiseCase.paragraphs"
+      alt
+    />
+    <Wpl2TextSection
+      id="aandeel"
+      :title="myContributions.title"
+      :paragraphs="myContributions.paragraphs"
+    />
+    <Wpl2DownloadSection :document="wpl2Document" />
 
-      <IntroSection :intro="wpl2Intro" />
-
-      <Wpl2TextSection
-        id="case"
-        :title="clockWiseCase.title"
-        :paragraphs="clockWiseCase.paragraphs"
-        alt
-      />
-
-      <Wpl2TextSection
-        id="aandeel"
-        :title="myContributions.title"
-        :paragraphs="myContributions.paragraphs"
-      />
-
-      <Wpl2DownloadSection :document="wpl2Document" />
-    </main>
-
-    <footer class="site-footer">
-      <span>{{ profile.name }} · 2PROC · PXL-Digital · Monocode</span>
-      <span>ClockWise · WPL2</span>
-    </footer>
-  </div>
+    <template #footer-start>{{ profile.name }} · 2PROC · PXL-Digital · Monocode</template>
+    <template #footer-end>ClockWise · WPL2</template>
+  </PageLayout>
 </template>

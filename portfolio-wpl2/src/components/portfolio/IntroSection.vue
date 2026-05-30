@@ -1,5 +1,5 @@
 <script setup>
-import RevealSection from './RevealSection.vue'
+import WplSection from './WplSection.vue'
 
 defineProps({
   intro: {
@@ -10,10 +10,7 @@ defineProps({
 </script>
 
 <template>
-  <RevealSection id="inleiding" class="wpl-section section-shell">
-    <h2 class="wpl-section__title">{{ intro.title }}</h2>
-    <div class="wpl-prose">
-      <p v-for="(paragraph, index) in intro.paragraphs" :key="index">{{ paragraph }}</p>
-    </div>
-  </RevealSection>
+  <WplSection id="inleiding" :title="intro.title" prose>
+    <p v-for="(paragraph, index) in intro.paragraphs" :key="index">{{ paragraph }}</p>
+  </WplSection>
 </template>
